@@ -59,5 +59,13 @@ namespace PROJETO_INTEGRADOR
             panel1.Left = (this.ClientSize.Width - panel1.Width) / 2;
             panel1.Top = (this.ClientSize.Height - panel1.Height) / 2;
         }
+
+        private void chk_mostrarSenha_login_CheckedChanged(object sender, EventArgs e)
+        {
+            // Se o checkbox estiver marcado, mostra o texto. Se não, oculta
+            bool ocultar = !chk_mostrarSenha_login.Checked;
+
+            txt_senha_login.UseSystemPasswordChar = ocultar;
+        }
     }
 }

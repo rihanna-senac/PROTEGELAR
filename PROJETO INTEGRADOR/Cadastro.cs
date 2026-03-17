@@ -74,5 +74,14 @@ namespace PROJETO_INTEGRADOR
         {
 
         }
+
+        private void chk_mostrarSenha_cadastro_CheckedChanged(object sender, EventArgs e)
+        {
+            // Se o checkbox estiver marcado, mostra o texto. Se não, oculta
+            bool ocultar = ! chk_mostrarSenha_cadastro.Checked;
+           
+            txt_senha_cadastro.UseSystemPasswordChar = ocultar;
+            txt_confirmarSenha_cadastro.UseSystemPasswordChar= ocultar;
+        }
     }
 }

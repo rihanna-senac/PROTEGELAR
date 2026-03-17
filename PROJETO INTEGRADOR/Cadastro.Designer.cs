@@ -44,12 +44,14 @@
             lbl_email_cadastro = new Label();
             lbl_nomeCompleto_cadastro = new Label();
             lbl_cadastro = new Label();
+            chk_mostrarSenha_cadastro = new CheckBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.Anchor = AnchorStyles.None;
+            panel1.Controls.Add(chk_mostrarSenha_cadastro);
             panel1.Controls.Add(btn_voltar_cadastro);
             panel1.Controls.Add(btn_criarConta_cadastro);
             panel1.Controls.Add(txt_confirmarSenha_cadastro);
@@ -211,6 +213,17 @@
             lbl_cadastro.Text = "CADASTRO";
             lbl_cadastro.Click += label1_Click;
             // 
+            // chk_mostrarSenha_cadastro
+            // 
+            chk_mostrarSenha_cadastro.AutoSize = true;
+            chk_mostrarSenha_cadastro.Location = new Point(442, 237);
+            chk_mostrarSenha_cadastro.Name = "chk_mostrarSenha_cadastro";
+            chk_mostrarSenha_cadastro.Size = new Size(102, 19);
+            chk_mostrarSenha_cadastro.TabIndex = 15;
+            chk_mostrarSenha_cadastro.Text = "Mostrar Senha";
+            chk_mostrarSenha_cadastro.UseVisualStyleBackColor = true;
+            chk_mostrarSenha_cadastro.CheckedChanged += chk_mostrarSenha_cadastro_CheckedChanged;
+            // 
             // Cadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -243,5 +256,6 @@
         private Button btn_criarConta_cadastro;
         private TextBox txt_confirmarSenha_cadastro;
         private TextBox txt_senha_cadastro;
+        private CheckBox chk_mostrarSenha_cadastro;
     }
 }
